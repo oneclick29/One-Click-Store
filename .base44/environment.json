@@ -1,0 +1,18 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "JWT_SECRET",
+      "description": "Secret key for signing JWT auth tokens. A development placeholder is set by default; replace with a real 32+ char secret for production.",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": true
+    },
+    {
+      "name": "GROQ_API_KEY",
+      "description": "Groq API key for the AI chatbot feature. Obtain from https://console.groq.com/keys. Not required for the app to boot.",
+      "requiredAtBoot": false
+    }
+  ]
+}
